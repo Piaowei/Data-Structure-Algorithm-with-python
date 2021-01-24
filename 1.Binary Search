@@ -30,3 +30,33 @@ list1.sort()
 print(list1)
 key = int(input("Enter a key"))
 Binary_sreach(list1,key)
+------------------------------------------------------
+#second theory
+def Binary_sreach(list1,key):
+  low = 0
+  high = len(list1)-1
+  #found = False
+  while low <=high :
+
+    mid = (low+high)//2
+    if key ==list1[mid]:
+        print("Done")
+        break
+        #found =True
+
+    elif key >list1[mid]:
+        low =mid+1
+    else:
+        high =mid-1
+  #if found == True :
+    #print("Key is founf")
+  print("not found")
+  #lse:
+    #print("Key is not found")
+
+
+list1 =[23,1,4,2,3]
+list1.sort()
+print(list1)
+key = 29
+Binary_sreach(list1,key)
