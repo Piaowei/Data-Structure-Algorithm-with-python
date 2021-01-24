@@ -31,7 +31,7 @@ print(list1)
 key = int(input("Enter a key"))
 Binary_sreach(list1,key)
 ------------------------------------------------------
-#second theory
+#second system
 def Binary_sreach(list1,key):
   low = 0
   high = len(list1)-1
@@ -49,7 +49,7 @@ def Binary_sreach(list1,key):
     else:
         high =mid-1
   #if found == True :
-    #print("Key is founf")
+    #print("Key is found",mid)#here mid is given to get the index value of input
   print("not found")
   #lse:
     #print("Key is not found")
