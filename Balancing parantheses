@@ -29,3 +29,39 @@ if len(A)==0:
 
 else:
     print(Balanced(A))
+    
+
+
+#####################################################################################################
+#####################################################################################################
+# USING ONE FUNCION
+
+def Balanced(A):
+    stack=[]
+    for i in range(len(A)):
+        if A[i] =='[' or A[i]=='{' or A[i] =='(':
+            stack.append(A[i])
+        elif A[i] == ']' or A[i] == '}' or A[i] == ')':
+
+            if stack[-1]=="(" and A[i] ==")" :
+                stack.pop()
+            elif stack[-1] == "{" and A[i] == "}":
+                stack.pop()
+            elif stack[-1] == "[" and A[i] == "]":
+                stack.pop()
+
+            """if arePairs(stack[-1],A[i] or len(stack)!=0):
+                stack.pop()"""
+
+    if not stack:
+        return True
+    else:
+        return False
+
+
+A="[{{()(}}}]"
+if len(A)==0:
+    print("There must be some")
+
+else:
+    print(Balanced(A))
